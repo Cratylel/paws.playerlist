@@ -1,0 +1,25 @@
+
+{
+  "Name": "paws.playerlist",
+  "Description": "List connected players and monitor joins/disconnects",
+  "Version": "1.0.0",
+  "LoadPriority": 0,
+  "ConVars": [],
+  "ConCommands": [
+    {
+      "Name": "list_players",
+      "Function": "listPlayers",
+      "Context": "CLIENT",
+      "HelpString": "List connected players with tags and UIDs"
+    }
+  ],
+  "Scripts": [
+    {
+      "Path": "cl_playerlist.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "After": "PawsPlayerMonitor_Init"
+      }
+    }
+  ]
+}
